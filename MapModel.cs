@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 
 namespace BattleShip
@@ -7,6 +7,7 @@ namespace BattleShip
     public class MapModel
 
     {
+    
 
         public static void Main()
 
@@ -15,19 +16,19 @@ namespace BattleShip
             //  -------------------   CREATING THE MAPMODEL FOR THE GAME   ------------------------
 
 
-            Console.WriteLine("  - - - - -    B A T T L E S H I P  M A P !    - - - - - -  \n\n");
+            Console.WriteLine("  - - - - - - - - -    B A T T L E S H I P  M A P !    - - - - - - - - - -  \n\n");
 
 
             /*  > We start by creating an array in which we put the size of our matrix, being 12x12.
                   The numbers go from 1 to 12 as seen in the foor loop.                          */
 
 
-            int[,] mapmodel = new int[12, 12];
+            int[,] mapmodel = new int[13, 13];
 
-            for (int i = 1; i < 12; i++)
+            for (int i = 1; i < 13; i++)
 
             {
-                for (int j = 1; j < 12; j++)
+                for (int j = 1; j < 13; j++)
 
                 {
                     mapmodel[i, j] = i * j;
@@ -42,14 +43,14 @@ namespace BattleShip
                   the matrix.                                                                  */
 
 
-
-            for (int i = 1; i < 12; i++)
+   
+            for (int i = 1; i < 13; i++)
 
             {
 
-                Console.WriteLine("___\n");  // > Making spaces between each column.
+                // > Making spaces between each column.
 
-                for (int j = 1; j < 12; j++)
+                for (int j = 1; j < 13; j++)
 
                 {
 
@@ -59,9 +60,16 @@ namespace BattleShip
 
                     {
 
-                        Console.Write("" + mapmodel[i, j] + " |  ");  // printing the first column and row. 
+                        Console.Write("  " + mapmodel[i, j] + " | " , Console.BackgroundColor = ConsoleColor.White, Console.ForegroundColor = ConsoleColor.Black);  // printing the first column and row. 
 
                     }
+
+                   /* else if ((i == 0 || j == 11) || (i == 0 || j == 12) || (i == 0 || j == 10))
+
+                    {
+                        comentarlo con luka
+
+                    } */
 
                     else    /* > Now, the rest of the numbers in the matrix wont be visible. They'll be 
                                  substitued with the color blue to simulate the water.               */
@@ -69,19 +77,23 @@ namespace BattleShip
 
                     {
 
-                        Console.Write("   . "); // Mirarlo luego. 
+                        Console.Write("      ", Console.BackgroundColor = ConsoleColor.Blue); // The rest of the matrix wont be visible. 
 
 
                     }
 
                 }
 
+
+                
                 Console.WriteLine();
 
             }
 
+            Console.ResetColor();
+            Console.WriteLine("\n\n  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "); // Map border.
             Console.ReadLine();
-
+            
         }
 
     }
