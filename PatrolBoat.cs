@@ -1,5 +1,5 @@
 ﻿using System;
-namespace PracticalWorkII
+namespace BattleShip
 {
 	public class PatrolBoat
 	{
