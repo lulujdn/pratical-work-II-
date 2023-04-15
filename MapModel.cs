@@ -2,101 +2,271 @@ using System;
 using System.Drawing;
 
 namespace BattleShip
-
 {
-    public class MapModel
+    public class MapModel2
 
     {
-    
-
         public static void Main()
-
-
         {
-            //  -------------------   CREATING THE MAPMODEL FOR THE GAME   ------------------------
+            // ------------------- CREATING THE MAPMODEL FOR THE GAME ------------------------
 
+            Console.WriteLine("  - - -     B A T T L E S H I P  M A P    - - -  \n\n");
 
-            Console.WriteLine("  - - - - - - - - -    B A T T L E S H I P  M A P !    - - - - - - - - - -  \n\n");
-
-
-            /*  > We start by creating an array in which we put the size of our matrix, being 12x12.
-                  The numbers go from 1 to 12 as seen in the foor loop.                          */
-
-
-            int[,] mapmodel = new int[13, 13];
-
-            for (int i = 1; i < 13; i++)
-
+            for (int i = 0; i < 12; i++)
             {
-                for (int j = 1; j < 13; j++)
-
-                {
-                    mapmodel[i, j] = i * j;
-                }
-
+                Console.Write("{0,4}", Convert.ToChar(i + 65));
             }
 
+            Console.WriteLine();
 
-
-            /*  > We use a bidimentional array in order to define two variables. In this case, we 
-                  have the "i" and the "j" that will store the vakues of the rows and columns of
-                  the matrix.                                                                  */
-
-
-   
-            for (int i = 1; i < 13; i++)
-
+            for (int i = 0; i < 12; i++)
             {
 
-                // > Making spaces between each column.
+                Console.Write("{0,-2}", Convert.ToChar(i + 65));
 
-                for (int j = 1; j < 13; j++)
 
+                for (int j = 0; j < 12; j++)
                 {
-
-                    if (i == 1 || j == 1)    /* > Creating a condition so that on only the first column
-                                                  an the firt row are visible in the map. So, if i and j 
-                                                  are equal to 1, the first row and column will show up. */
-
+                    if (i == 0 && j == 9) 
                     {
-
-                        Console.Write("  " + mapmodel[i, j] + " | " , Console.BackgroundColor = ConsoleColor.White, Console.ForegroundColor = ConsoleColor.Black);  // printing the first column and row. 
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]"); 
+                        Console.ResetColor();
+                    }
+                    else if (i == 0 && j == 10) 
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]"); 
+                        Console.ResetColor();
+                    }
+                    else if (i == 0 && j == 11) 
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
 
                     }
-
-                   /* else if ((i == 0 || j == 11) || (i == 0 || j == 12) || (i == 0 || j == 10))
-
+                    else if (i == 2 && j == 2)
                     {
-                        comentarlo con luka
-
-                    } */
-
-                    else    /* > Now, the rest of the numbers in the matrix wont be visible. They'll be 
-                                 substitued with the color blue to simulate the water.               */
-
-
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 3 && j == 2)
                     {
-
-                        Console.Write("      ", Console.BackgroundColor = ConsoleColor.Blue); // The rest of the matrix wont be visible. 
-
-
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 4 && j == 2)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
                     }
 
+                    else if (i == 5 && j == 1)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+
+                    else if (i == 5 && j == 2)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 5 && j == 0)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 5 && j == 3)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 5 && j == 4)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 5 && j == 5)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 5 && j == 6)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 6 && j == 6)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+
+                    }
+                    else if (i == 6 && j == 5)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 6 && j == 4)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 4 && j == 5)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 3 && j == 5)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 6 && j == 3)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 6 && j == 8)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 8 && j == 6)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 7 && j == 6)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 5 && j == 7)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 6 && j == 7)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 6 && j == 0)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 6 && j == 1)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 7 && j == 0)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                 
+                    else if (i == 6 && j == 2)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 7 && j == 2)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 8 && j == 2)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else if (i == 9 && j == 2)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("{0,-4}", "[*]");
+                        Console.ResetColor();
+                    }
+                    else
+                    {
+                        Console.BackgroundColor = ConsoleColor.Blue;
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.Write("{0,-4}", "[*]"); 
+                        Console.ResetColor();
+                    }
                 }
 
-
-                
                 Console.WriteLine();
-
             }
 
-            Console.ResetColor();
-            Console.WriteLine("\n\n  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "); // Map border.
             Console.ReadLine();
-            
         }
+
+
+
 
     }
 
 }
-
